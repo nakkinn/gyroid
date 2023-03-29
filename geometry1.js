@@ -1,3 +1,8 @@
+function disableScroll(event) { //スマホの縦スクロールを制限
+    event.preventDefault();
+}
+document.addEventListener('touchmove', disableScroll, { passive: false });
+
 let spiral1,spiral2;
 let r = 45;
 let cam;
