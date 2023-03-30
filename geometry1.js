@@ -1,7 +1,11 @@
-function disableScroll(event) { //スマホの縦スクロールを制限
+function handle(event) {
     event.preventDefault();
 }
-document.addEventListener('touchmove', disableScroll, { passive: false });
+
+window.onload = function() {
+  document.addEventListener('touchmove', handle, { passive: false });
+  document.addEventListener('mousewheel', handle, { passive: false });
+}
 
 let spiral1,spiral2;
 let r = 45;
